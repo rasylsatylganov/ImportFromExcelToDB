@@ -4,19 +4,17 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@Component
 @Data
-@ConfigurationProperties(prefix = "excel")
-public class ExcelProperties {
+@Component
+@ConfigurationProperties(prefix = "excel-export")
+public class ExcelExportProperties {
 
-    private String importDir;
-    private String archiveDir;
-    private String fileName;
     private String tableName;
+
     private String dbColumnId;
     private String dbColumnCode;
     private String dbColumnName;
-    private int columnCode;
-    private int columnName;
 
+    private String exportDir;
+    private String fileName;
 }

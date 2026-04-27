@@ -1,7 +1,7 @@
 package kg.home.demo.service;
 
 
-import kg.home.demo.configs.ExcelProperties;
+import kg.home.demo.configs.ExcelImportProperties;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.*;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,7 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ExcelImportService {
 
-    private final ExcelProperties props;
+    private final ExcelImportProperties props;
     private final JdbcTemplate jdbcTemplate;
 
     public int importExcel() throws Exception {

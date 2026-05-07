@@ -4,6 +4,7 @@ package kg.home.demo.service;
 import kg.home.demo.configs.ExcelImportProperties;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.util.IOUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +42,8 @@ public class ExcelImportService {
 
         List<Object[]> batch = new ArrayList<>();
         int batchSize = 1000;
+
+        IOUtils.setByteArrayMaxOverride(1_000_000_000);
 
         try (Workbook workbook = WorkbookFactory.create(new FileInputStream(file))) {
 

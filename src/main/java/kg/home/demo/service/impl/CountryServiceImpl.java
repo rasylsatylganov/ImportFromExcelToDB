@@ -1,8 +1,9 @@
-package kg.home.demo.service;
+package kg.home.demo.service.impl;
 
 
 import kg.home.demo.entity.Country;
 import kg.home.demo.repository.CountryRepository;
+import kg.home.demo.service.CountryService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
